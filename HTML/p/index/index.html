@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WKWebView</title>
+	<meta name="viewport"content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable="no"/>
+</head>
+<script type="text/javascript">
+	function setCookie(cname,cvalue,exdays) {
+		var d = new Date();
+		d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+		var expires = "expires=" + d.toGMTString();
+		document.cookie = cname + "=" + cvalue + ";" + expires;
+	}
+	function getCookie(cname) {
+		var name = cname + "=";
+		var ca = document.cookie.split(';');
+		for (var i = 0;i<ca.length;i++) {
+			var c = ca[i].trim();
+			if (c.indexOf(name) == 0) {
+				return c.substring(name.length,c.length);
+			}
+		}
+		return "";
+	}
+	function checkCookie() {
+		var user = getCookie("username");
+		if (user != "") {
+			alert("Welcome  " + user);
+		}else {
+			user = prompt("Please enter your name:","");
+			if (user != "" && user != null) {
+				setCookie("username",user,1);
+			}
+		}
+	}
+
+</script>
+<body style="text-align: center" onload="checkCookie()">
+	<div style="margin: 0 auto;width: 400px;height: 400px;border: 1px solid #F00">
+		<label>您已经登录</label>
+	</div>
+	
+</body>
+</html>
