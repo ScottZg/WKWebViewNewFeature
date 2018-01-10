@@ -6,10 +6,88 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--New Features-->
+        <scene sceneID="ijd-bk-Quh">
+            <objects>
+                <viewController id="J7J-Vx-6PH" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JKq-ix-VBY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eWn-Ma-6wl">
+                                <rect key="frame" x="127" y="152" width="120" height="30"/>
+                                <state key="normal" title="Manager Cookies"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="f2R-2t-oaJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jav-PX-Tc4">
+                                <rect key="frame" x="106" y="318" width="162" height="30"/>
+                                <state key="normal" title="Filter unwanted content"/>
+                                <connections>
+                                    <segue destination="4gY-WF-zWr" kind="show" id="beC-I2-kpk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFz-QV-Jf5">
+                                <rect key="frame" x="99" y="499" width="177" height="30"/>
+                                <state key="normal" title="Provide Custom Resource"/>
+                                <connections>
+                                    <segue destination="Bje-Xx-tPd" kind="show" id="DJD-fy-xNm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Jav-PX-Tc4" firstAttribute="centerX" secondItem="sX8-La-Mvy" secondAttribute="centerX" id="0Tr-ZE-84F"/>
+                            <constraint firstItem="gFz-QV-Jf5" firstAttribute="centerX" secondItem="sX8-La-Mvy" secondAttribute="centerX" id="DEh-hg-6Br"/>
+                            <constraint firstItem="gFz-QV-Jf5" firstAttribute="top" secondItem="Jav-PX-Tc4" secondAttribute="bottom" constant="151" id="Gns-gf-qm5"/>
+                            <constraint firstItem="eWn-Ma-6wl" firstAttribute="centerX" secondItem="sX8-La-Mvy" secondAttribute="centerX" id="SrE-VG-EkF"/>
+                            <constraint firstItem="eWn-Ma-6wl" firstAttribute="top" secondItem="sX8-La-Mvy" secondAttribute="top" constant="88" id="VHj-ce-2Hr"/>
+                            <constraint firstItem="Jav-PX-Tc4" firstAttribute="top" secondItem="eWn-Ma-6wl" secondAttribute="bottom" constant="136" id="pST-16-ZTq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sX8-La-Mvy"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Features" id="ShW-1q-ZUY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UPq-xj-jYi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="998" y="99"/>
+        </scene>
+        <!--Custom Resource View Controller-->
+        <scene sceneID="3Fb-iB-upr">
+            <objects>
+                <viewController id="Bje-Xx-tPd" customClass="CustomResourceViewController" customModule="WKWebViewNewFeaturesDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2cH-6b-fE5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="zwm-7X-CLE"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kjn-fN-4Xy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="998" y="795"/>
+        </scene>
+        <!--Filter View Controller-->
+        <scene sceneID="399-wa-ZZS">
+            <objects>
+                <viewController id="4gY-WF-zWr" customClass="FilterViewController" customModule="WKWebViewNewFeaturesDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4nN-rQ-Ojt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="EWh-be-N2a"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pix-eF-WJh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1852" y="437"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -21,21 +99,23 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="AJ9-Dk-RmH">
-                        <barButtonItem key="leftBarButtonItem" title="Refresh" id="4kH-h4-AZo">
-                            <connections>
-                                <action selector="refreshWebViewAction:" destination="BYZ-38-t0r" id="iw7-18-yH5"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="logout" id="TIv-hf-fSv">
-                            <connections>
-                                <action selector="logoutAction:" destination="BYZ-38-t0r" id="y8O-Zb-til"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="logout" id="TIv-hf-fSv">
+                                <connections>
+                                    <action selector="logoutAction:" destination="BYZ-38-t0r" id="y8O-Zb-til"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Refresh" id="4kH-h4-AZo">
+                                <connections>
+                                    <action selector="refreshWebViewAction:" destination="BYZ-38-t0r" id="iw7-18-yH5"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="711.20000000000005" y="99.400299850074973"/>
+            <point key="canvasLocation" x="1852" y="-225"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="chP-3N-rw1">
@@ -48,7 +128,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="m9q-jN-vTa"/>
+                        <segue destination="J7J-Vx-6PH" kind="relationship" relationship="rootViewController" id="PPt-Ww-aRj"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nfa-R9-cKy" userLabel="First Responder" sceneMemberID="firstResponder"/>
